@@ -6,6 +6,22 @@
         xmlns:local="clr-namespace:ISRPO_Palashicheva_PR11"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="250" MinHeight="450" MinWidth="250">
+    <Window.Resources>
+        <SolidColorBrush x:Key="LightBlue" Color="LightBlue"/>
+        <SolidColorBrush x:Key="Black" Color="Black"/>
+        <FontFamily x:Key="Times">Arial</FontFamily>
+        <FontWeight x:Key="Bold"/>
+        <Thickness x:Key="Min">14</Thickness>
+
+        <Style x:Key="ListBoxItemStyle">
+            <Setter Property="ItemsControl.FontFamily" Value="Times New Roman"/>
+            <Setter Property="ItemsControl.FontSize" Value="14"/>
+            <Setter Property="ItemsControl.FontWeight" Value="Bold"/>
+            <Setter Property="ItemsControl.Background" Value="{StaticResource LightBlue}"/>
+            <Setter Property="ItemsControl.Foreground" Value="{StaticResource Black}"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
@@ -13,7 +29,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <ListBox Name="listbox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="200">
-                <ListBoxItem Foreground="Red" FontFamily="Verdana" FontWeight="Bold" Background="#FFF3D6D6">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
                     <CheckBox x:Name="CoffieCB">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/cof.png" Height="30"></Image>
@@ -21,7 +37,7 @@
                         </StackPanel>
                     </CheckBox>
                 </ListBoxItem>
-                <ListBoxItem Foreground="Black" FontFamily="Verdana" FontWeight="Bold" Background="#FFF1F1F1">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
                     <CheckBox x:Name="tEACB">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/teea.png" Height="30"></Image>
@@ -29,7 +45,7 @@
                         </StackPanel>
                     </CheckBox>
                 </ListBoxItem>
-                <ListBoxItem Foreground="#FFA022A0" FontFamily="Verdana" FontWeight="Bold" Background="#FF79DAEA">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
                     <CheckBox x:Name="OrangeCB">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/orange.png" Height="30"></Image>
@@ -37,7 +53,7 @@
                         </StackPanel>
                     </CheckBox>
                 </ListBoxItem>
-                <ListBoxItem Foreground="#FF318347" FontFamily="Verdana" FontWeight="Bold" Background="#FFD4E8D0">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
                     <CheckBox x:Name="MilkCB">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/milk.png" Height="30"></Image>
@@ -45,7 +61,7 @@
                         </StackPanel>
                     </CheckBox>
                 </ListBoxItem>
-                <ListBoxItem Foreground="#FF2B39BF" FontFamily="Verdana" FontWeight="Bold" Background="#FF79DAEA">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
                     <CheckBox x:Name="IcedCB">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/teea.png" Height="30"></Image>
@@ -53,7 +69,7 @@
                         </StackPanel>
                     </CheckBox>
                 </ListBoxItem>
-                <ListBoxItem Foreground="#FFFFBE89" FontFamily="Verdana" FontWeight="Bold" Background="#FF9BA4AC">
+                <ListBoxItem Style="{StaticResource ListBoxItemStyle}">
                     <CheckBox x:Name="MangoCB">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Image/shake.png" Height="30"></Image>
