@@ -24,5 +24,45 @@ namespace ISRPO_Palashicheva_PR11
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            listbox1.Items.Add(textbox1.Text);
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            listbox1.Items.Remove(listbox1.SelectedItem);
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            listbox1.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription("Content", System.ComponentModel.ListSortDirection.Ascending));
+        }
+
+        private void Zd2_Click(object sender, RoutedEventArgs e)
+        {
+            Window a = new Window1();
+            a.Show();
+        }
+
+
+        private void Prakt_Click(object sender, RoutedEventArgs e)
+        {
+            Window a = new Window2();
+            a.Show();
+        }
+
+        private void Praktika_Click(object sender, RoutedEventArgs e)
+        {
+            Window a = new Window3();
+            a.Show();
+        }
+
+        private void Individ_Click(object sender, RoutedEventArgs e)
+        {
+            Window a = new Window4();
+            a.Show();
+        }
     }
 }
