@@ -1,0 +1,89 @@
+﻿<Window x:Class="ISRPO_Palashicheva_PR11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISRPO_Palashicheva_PR11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="250" MinHeight="450" MinWidth="250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <ListBox Name="listbox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="200">
+                <ListBoxItem Foreground="Red" FontFamily="Verdana" FontWeight="Bold" Background="#FFF3D6D6">
+                    <CheckBox x:Name="CoffieCB">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/cof.png" Height="30"></Image>
+                            <TextBlock Text="Coffie"></TextBlock>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+                <ListBoxItem Foreground="Black" FontFamily="Verdana" FontWeight="Bold" Background="#FFF1F1F1">
+                    <CheckBox x:Name="tEACB">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/teea.png" Height="30"></Image>
+                            <TextBlock Text="Tea"></TextBlock>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+                <ListBoxItem Foreground="#FFA022A0" FontFamily="Verdana" FontWeight="Bold" Background="#FF79DAEA">
+                    <CheckBox x:Name="OrangeCB">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/orange.png" Height="30"></Image>
+                            <TextBlock Text="Orange Juice"></TextBlock>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+                <ListBoxItem Foreground="#FF318347" FontFamily="Verdana" FontWeight="Bold" Background="#FFD4E8D0">
+                    <CheckBox x:Name="MilkCB">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/milk.png" Height="30"></Image>
+                            <TextBlock Text="Milk"></TextBlock>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+                <ListBoxItem Foreground="#FF2B39BF" FontFamily="Verdana" FontWeight="Bold" Background="#FF79DAEA">
+                    <CheckBox x:Name="IcedCB">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/teea.png" Height="30"></Image>
+                            <TextBlock Text="Iced Tea"></TextBlock>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+                <ListBoxItem Foreground="#FFFFBE89" FontFamily="Verdana" FontWeight="Bold" Background="#FF9BA4AC">
+                    <CheckBox x:Name="MangoCB">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Image/shake.png" Height="30"></Image>
+                            <TextBlock Text="Mango Shake"></TextBlock>
+                        </StackPanel>
+                    </CheckBox>
+                </ListBoxItem>
+            </ListBox>
+            <TextBox Height="23" HorizontalAlignment="Left" Name="textbox1" VerticalAlignment="Top" Width="193"/>
+        </StackPanel>
+        <WrapPanel Grid.Row="1">
+            <Button Height="23" Margin="0,0,5,0"  Name="button1" Click="button1_Click" VerticalAlignment="Top">Add Item</Button>
+            <Button Height="23" Margin="0,0,5,0" Name="button2" Click="button2_Click" VerticalAlignment="Top">Delete Item</Button>
+            <Button Height="23" Margin="0,0,5,0" Name="button3" Click="button3_Click" VerticalAlignment="Top">Sort</Button>
+            <Button Height="23" Margin="0,5,5,0" Name="Zd2" Click="Zd2_Click" VerticalAlignment="Top" Width="160" Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE2EFF3" Offset="0"/>
+                        <GradientStop Color="#FFEA89FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background> Задание2
+            </Button>
+            <Button Height="23" Margin="0,5,5,0" Name="Individ" Click="Individ_Click" VerticalAlignment="Top" Width="160" Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA294FF" Offset="0"/>
+                        <GradientStop Color="#FFCB4EA3" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background> Индивидуальное задание
+            </Button>
+        </WrapPanel>
+    </Grid>
+</Window>
