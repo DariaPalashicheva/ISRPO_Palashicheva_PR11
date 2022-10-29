@@ -23,5 +23,10 @@ namespace ISRPO_Palashicheva_PR11
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
