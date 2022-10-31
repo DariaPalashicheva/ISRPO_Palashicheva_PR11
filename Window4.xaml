@@ -6,7 +6,108 @@
         xmlns:local="clr-namespace:ISRPO_Palashicheva_PR11"
         mc:Ignorable="d"
         Title="Window4" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <Style x:Key="style1">
+            <Setter Property="Shape.Fill">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0" Color="#FF1ED2CA"/>
+                        <GradientStop Offset="0.5" Color="#FF0F1874"/>
+                        <GradientStop Offset="1.5" Color="#FF631A66"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Shape.Stroke" Value="CadetBlue"/>
+            <Setter Property="Shape.StrokeThickness" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.Foreground" Value="Red"/>
+                    <Setter Property="ItemsControl.RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="10" CenterX="75" CenterY="25"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="style2">
+            <Setter Property="Shape.Fill">
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Offset="0" Color="#FFF2FDFF"/>
+                        <GradientStop Offset="1.5" Color="#FF00D1FF"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Shape.Stroke">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0" Color="#FFC7A0FF"/>
+                        <GradientStop Offset="1.5" Color="#FF00D1FF"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Shape.StrokeThickness" Value="10"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.Foreground" Value="Red"/>
+                    <Setter Property="ItemsControl.RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="10"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="style3">
+            <Setter Property="Shape.Fill" Value="DarkMagenta"/>
+            <Setter Property="Shape.Stroke" Value="Navy"/>
+            <Setter Property="Shape.StrokeThickness" Value="3"/>
+        </Style>
         
+        <Style x:Key="style4">
+            <Setter Property="Shape.Fill">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0" Color="#FF590A5D"/>
+                        <GradientStop Offset="0.5" Color="#FF1F58D3"/>
+                        <GradientStop Offset="1.5" Color="#FFA63286"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Shape.Stroke" Value="#FFCA59DC"/>
+            <Setter Property="Shape.StrokeThickness" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.Foreground" Value="Red"/>
+                    <Setter Property="ItemsControl.RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="10" CenterX="25" CenterY="75"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="FigureCount"
+                 ToolTip="Inter figure Count"
+                 Margin="5"
+                 Text="10"/>
+            <Button Grid.Column="1" Click="Button_Click">Generate Shapes</Button>
+        </Grid>
+        <Canvas Name="MainCanvas" Grid.Row="1" Margin="5"/>
     </Grid>
 </Window>
